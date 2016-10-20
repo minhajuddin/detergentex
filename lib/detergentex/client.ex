@@ -15,6 +15,10 @@ defmodule Detergentex.Client do
     :detergent.call(wsdl, method_to_call, detergent_params)
   end
 
+  def init_model_file(wsdl_file_path) do
+    :detergent.initModelFile(to_char_list(wsdl_file_path))
+  end
+
   def init_model(wsdl_url, prefix \\ 'p') do
     :detergent.initModel(to_char_list(wsdl_url), to_char_list(prefix))
   end

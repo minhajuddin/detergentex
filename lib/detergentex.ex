@@ -18,6 +18,10 @@ defmodule Detergentex do
     Detergentex.Client.init_model(wsdl_url, prefix)
   end
 
+  def init_model_file(wsdl_file_path) do
+    Detergentex.Client.init_model_file(wsdl_file_path)
+  end
+
   def is_wsdl(wsdl) do
     Detergentex.Client.is_wsdl(wsdl)
   end
